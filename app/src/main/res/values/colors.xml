@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    // provided bg color codes
+
+    <color name="text_composable_bg">#FFEADDFF</color>
+    <color name="image_composable_bg">#FFD0BCFF</color>
+    <color name="column_composable_bg">#FFB69DF8</color>
+    <color name="row_composable_bg">#FFF6EDFF</color>
 </resources>
