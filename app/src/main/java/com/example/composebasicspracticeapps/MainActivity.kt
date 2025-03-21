@@ -64,7 +64,7 @@ fun MainApp(modifier: Modifier = Modifier) {
      DoneTaskScreen()
      */
     ComposeQuadrantScreen()
-   
+
 }
 
 @Composable
@@ -83,7 +83,7 @@ fun ComposeTutorialsScreen(
             painter = image,
             contentDescription = "image",
             modifier = Modifier.fillMaxWidth()
-            )
+        )
         Text(
             text = tutorialTitle,
             fontSize = 24.sp,
@@ -107,7 +107,7 @@ fun ComposeTutorialsScreen(
 @Composable
 fun DoneTaskScreen(
     modifier: Modifier = Modifier,
-    ) {
+) {
     val taskDoneImg = painterResource(R.drawable.ic_task_completed_checkmark)
     Column(
         modifier = modifier
@@ -156,24 +156,24 @@ fun ComposeQuadrantScreen(
     Column(
         modifier = modifier,
 
-    ) {
-       Row(
-           modifier = Modifier.weight(1f)
-       ) {
-           QuadrantSection(
-               "Text Composable",
-               quadDescription = stringResource(R.string.text_composable_body),
-               bgColor = colorResource(R.color.text_composable_bg),
-               modifier = Modifier.weight(1f)
-           )
+        ) {
+        Row(
+            modifier = Modifier.weight(1f)
+        ) {
+            QuadrantSection(
+                "Text Composable",
+                quadDescription = stringResource(R.string.text_composable_body),
+                bgColor = colorResource(R.color.text_composable_bg),
+                modifier = Modifier.weight(1f)
+            )
 
-           QuadrantSection(
-               "Image Composable",
-               quadDescription = stringResource(R.string.image_composable_body),
-               bgColor = colorResource(R.color.image_composable_bg),
-               modifier = Modifier.weight(1f)
-           )
-       }
+            QuadrantSection(
+                "Image Composable",
+                quadDescription = stringResource(R.string.image_composable_body),
+                bgColor = colorResource(R.color.image_composable_bg),
+                modifier = Modifier.weight(1f)
+            )
+        }
 
         Row(
             modifier = Modifier.weight(1f)
@@ -194,27 +194,8 @@ fun ComposeQuadrantScreen(
             )
         }
 
-
-//        Row(
-//            horizontalArrangement = Arrangement.Center,
-//            verticalAlignment = Alignment.CenterVertically,
-//            modifier = Modifier.weight(1f)
-//
-//        ) {
-//            QuadrantSection(
-//                "Row Composable",
-//                stringResource(R.string.row_composable_body),
-//            )
-//
-//            QuadrantSection(
-//                "Column Composable",
-//                stringResource(R.string.column_composable_body),
-//
-//            )
-//        }
-
     }
-    
+
 }
 
 @Composable
@@ -225,24 +206,30 @@ fun QuadrantSection(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.background(bgColor).padding(16.dp).fillMaxSize(),
+        modifier = modifier
+            .background(bgColor)
+            .padding(16.dp)
+            .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
-        Text(text = quadTitle, fontWeight = FontWeight.Bold, modifier = Modifier.padding(bottom = 16.dp))
+        Text(
+            text = quadTitle,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(bottom = 16.dp)
+        )
         Text(text = quadDescription)
     }
 }
-
-
-
 
 
 @Preview(showBackground = true)
 @Composable
 fun MainAppPreview() {
     ComposeBasicsPracticeAppsTheme {
-        ComposeQuadrantScreen()
+        // DoneTaskScreen()
+        //ComposeTutorialsScreen()
+        // ComposeQuadrantScreen()
     }
 }
