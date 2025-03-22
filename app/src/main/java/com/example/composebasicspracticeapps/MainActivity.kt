@@ -1,5 +1,6 @@
 package com.example.composebasicspracticeapps
 
+import PostPage
 import android.graphics.drawable.Icon
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -43,12 +44,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeBasicsPracticeAppsTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Ebby",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                PostPage()
             }
         }
     }

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ComposeBasics Practice Apps</string>
+    <string name="dummy_post">
+        How many crimes in the country has the President condemned or spoken about since he was sworn in?
+        Should we now say that the President is sponsoring the killings?
+    </string>
+    <string name="dummy_comment">
+        Have you been listening to the Governor\'s speech, by their words you shall judge them
+    </string>
 </resources>
